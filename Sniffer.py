@@ -1,17 +1,19 @@
+import logging
+logging.getLogger("scapy.runtime").setLevel(logging.ERROR)
 from scapy.all import * 
 import sys
 
 def mainMenu():
     print('''\nSelecciona una opción:
-    2. Analizar paquetes de un protoclo en específico
-    1. Analizar todos los paquetes de cualquier protocolo
+    1. Analizar paquetes de un protocolo en específico
+    2. Analizar todos los paquetes de cualquier protocolo
     3. Salir
     ''')
     return
 
 def inputNombreInterfaz():
     
-    nombreInterfaz = input('Ingrese el nombre de la interfaz de red')
+    nombreInterfaz = input('Ingrese el nombre de la interfaz de red: ')
     choice = input('La red "{}" será analizada '.format(nombreInterfaz))
     return nombreInterfaz
     
